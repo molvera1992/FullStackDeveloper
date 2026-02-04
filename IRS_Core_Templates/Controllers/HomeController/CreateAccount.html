@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/styleTest.css">
+</head>
+
+<body>
+    <main>
+
+        <section>
+
+            <form action="" class="form-container-account">
+                <div class="button-return">
+                    <a asp-action="Login" asp-area="Admin" asp-controller="Login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l14 0" />
+                            <path d="M5 12l6 6" />
+                            <path d="M5 12l6 -6" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="image">
+                    <img src="/Images/logo.png" alt="Logo IRS">
+                </div>
+                <h1>Crear cuenta de IRS</h1>
+                <div class="formulario-group">
+                    <label>Marelli email account</label>
+                    <input type="text" placeholder="Ingrese su cuenta de correo electronico...">
+                    <label>First Name</label>
+                    <input type="text" placeholder="Ingrese su primer nombre...">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Ingrese su apellido paterno...">
+                    <label>Marelli windows account</label>
+                    <input type="text" placeholder="Ingrese su ID de Windows F????A...">
+                    <label>Password</label>
+                    <input type="password" placeholder="Ingrese su contraseña...">
+                </div>
+                <button>Crear Cuenta</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

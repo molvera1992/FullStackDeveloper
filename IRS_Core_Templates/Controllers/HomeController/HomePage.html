@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/homePage.css" />
+	<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+	<title>IRS System - Home</title>
+</head>
+
+<body>
+	<header class="sidebar">
+		<nav class="navbar">
+			<div class="header-icon-text">
+				<div class="image">
+					<a asp-area="Admin" asp-controller="Home" asp-action="index">
+						<img src="/Images/logo.png" alt="" />
+					</a>
+				</div>
+				<div>
+					<span class="">DigITal</span>
+					<span class="">Team</span>
+				</div>
+			</div>
+			<!-- Botón toggle visible en pantallas pequeñas -->
+			<button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-list" aria-label="Mostrar menú">
+				<span class="sr-only"></span>
+				<!-- icono simple (puedes usar fontawesome) -->
+				<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+			<ul class="sidebar-nav-list">
+				<li>
+					<a href="">
+						<i class="bx bx-home-alt icon">
+							<span>Home</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bx-book-reader icon">
+							<span>Administration</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bxs-report icon">
+							<span>Assets</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bx-cog icon">
+							<span>Process</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bx-glasses-alt icon">
+							<span>Visual Management</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bx-code-alt icon">
+							<span>IT Sites</span>
+						</i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="logOut-button">
+			<div>
+				<div>
+					<a href="">
+						<i class="bx bx-log-out icon">
+							<span>Log Out</span>
+						</i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="content-home">
+		<main class="main-content">
+			<div class="main-title">
+				<h1>Anuncios y Noticias</h1>
+				<p>Mantente actualizado con la información mas reciente</p>
+			</div>
+
+			<section class="articles-group">
+				<article class="article-item">
+					<div class="card-image"></div>
+					<span>Actualizaciones de Windows</span>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, proin in mattis erat ultricies sem, pulvinar
+						vehicula sollicitudin curae sociosqu rutrum. Ac condimentum habitasse bibendum sed auctor per himenaeos,
+						urna neque donec tristique tellus penatibus lectus, erat volutpat ut</p>
+					<a href="#">Leer mas...</a>
+				</article>
+				<article class="article-item">
+					<div class="card-image"></div>
+					<span>Tickets de Manufactura</span>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, proin in mattis erat ultricies sem, pulvinar
+						vehicula sollicitudin curae sociosqu rutrum. Ac condimentum habitasse bibendum sed auctor per himenaeos,
+						urna neque donec tristique tellus penatibus lectus, erat volutpat ut</p>
+					<a href="#">Leer mas...</a>
+				</article>
+				<article class="article-item">
+					<div class="card-image"></div>
+					<span>Ventanas de Mantenimiento</span>
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, proin in mattis erat ultricies sem, pulvinar
+						vehicula sollicitudin curae sociosqu rutrum. Ac condimentum habitasse bibendum sed auctor per himenaeos,
+						urna neque donec tristique tellus penatibus lectus, erat volutpat ut</p>
+					<a href="#">Leer mas...</a>
+				</article>
+			</section>
+			<section class="articles-group-2">
+				<h2>Actualizaciones recientes</h2>
+				<div class="card-group">
+					<div class="card-item">
+						<span>Anuncio de resultados Windows Update</span>
+						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, proin in mattis erat ultricies sem, pulvinar
+							vehicula sollicitudin curae sociosqu rutrum. Ac condimentum habitasse bibendum sed auctor per himenaeos,
+							urna neque donec tristique tellus penatibus </p>
+					</div>
+					<span class="card-date">31 Enero 2026</span>
+				</div>
+				<div class="card-group">
+					<div class="card-item">
+						<span>Anuncio de resultados Windows Update</span>
+						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, proin in mattis erat ultricies sem, pulvinar
+							vehicula sollicitudin curae sociosqu rutrum. Ac condimentum habitasse bibendum sed auctor per himenaeos,
+							urna neque donec tristique tellus penatibus </p>
+					</div>
+					<span class="card-date">31 Enero 2026</span>
+				</div>
+				<div class="card-group">
+					<div class="card-item">
+						<span>Anuncio de resultados Windows Update</span>
+						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, proin in mattis erat ultricies sem, pulvinar
+							vehicula sollicitudin curae sociosqu rutrum. Ac condimentum habitasse bibendum sed auctor per himenaeos,
+							urna neque donec tristique tellus penatibus </p>
+					</div>
+					<span class="card-date">31 Enero 2026</span>
+				</div>
+			</section>
+		</main>
+		<aside class="sidebar-panel">
+			<div class="sidebar-button">
+				<button>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M12 5l0 14" />
+						<path d="M5 12l14 0" />
+					</svg>Cargar Anuncio</button>
+			</div>
+			<div class="card">
+				<span class="calendar-title">Calendario de Actualizaciones Servidores</span>
+				<div class="month-nav">
+					<button>&lt</button>
+					<span>Enero 2026</span>
+					<button>&gt</button>
+				</div>
+				<div class="grid-calendar">
+					<div>D</div>
+					<div>L</div>
+					<div>M</div>
+					<div>M</div>
+					<div>J</div>
+					<div>V</div>
+					<div>S</div>
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+					<div>5</div>
+					<div>6</div>
+					<div>7</div>
+					<div>8</div>
+					<div>9</div>
+					<div>10</div>
+					<div>11</div>
+					<div>12</div>
+					<div>13</div>
+					<div>14</div>
+					<div>15</div>
+					<div>16</div>
+					<div>17</div>
+					<div>18</div>
+					<div>19</div>
+					<div>20</div>
+					<div>21</div>
+					<div>22</div>
+					<div>23</div>
+					<div>24</div>
+					<div>25</div>
+					<div>26</div>
+					<div>27</div>
+					<div>28</div>
+					<div>29</div>
+					<div>30</div>
+					<div>31</div>
+				</div>
+				<div class="calendar-legend">
+					<span>Mantenimiento</span>
+					<span>Parche de Seguridad</span>
+				</div>
+			</div>
+			<div class="card">
+				<span class="calendar-scheduled">Actualizaciones programadas 31 Enero</span>
+				<div class="scheduled-item">
+					<span>Parche de Seguridad Crítico</span>
+					<p>Actualización v2.1.5 obligatoria.</p>
+				</div>
+				<div class="scheduled-item">
+					<span>Base de Datos</span>
+					<p>Optimización de índices programada.</p>
+				</div>
+			</div>
+		</aside>
+	</div>
+
+</body>
+
+</html>
