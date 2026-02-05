@@ -181,7 +181,7 @@ body {
 	border: 1px solid #e2e8f0;
 	gap: 50px;
 
-	.card-date{
+	.card-date {
 		display: flex;
 		width: 30rem;
 		justify-content: center;
@@ -194,7 +194,7 @@ body {
 	text-align: justify;
 	gap: 15px;
 
-	span{
+	span {
 		font-weight: bold;
 	}
 }
@@ -476,6 +476,56 @@ body {
 		align-items: center;
 		margin-left: 10px;
 		padding: 0rem;
+	}
+
+}
+
+.article-ticket {
+	background-color: #707070;
+	width: 600px;
+}
+
+.card-ticket {
+	background: white;
+	border-radius: 12px;
+	width: 600px;
+	padding: 1rem;
+
+	.card-ticket-image {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		width: 100%;
+		height: 50%;
+		padding: 1rem;
+		border-radius: 1rem;
+		background-color: var(--sidebar-color);
+
+		.ticket-img {
+			width: 10rem;
+		}
+
+		span {
+			color: #e7e7e7;
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+
+		a {
+			color: #e7e7e7;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+	}
+
+	.card-ticket-details {
+		display: flex;
+		flex-direction: column;
+		margin-block: 1rem;
+		gap: 1rem;
+		background-color: #a0aefd;
 	}
 
 }

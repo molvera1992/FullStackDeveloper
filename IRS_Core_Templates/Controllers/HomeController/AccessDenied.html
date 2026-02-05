@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>IRS System - Access Denied</title>
+	<link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/homePage.css" />
+</head>
+
+<body>
+	<header class="sidebar">
+		<nav class="navbar">
+			<div class="header-icon-text">
+				<div class="image">
+					<a asp-area="Admin" asp-controller="Home" asp-action="index">
+						<img src="/Images/logo.png" alt="" />
+					</a>
+				</div>
+				<div>
+					<span class="">DigITal</span>
+					<span class="">Team</span>
+				</div>
+			</div>
+			<!-- Botón toggle visible en pantallas pequeñas -->
+			<button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-list" aria-label="Mostrar menú">
+				<span class="sr-only"></span>
+				<!-- icono simple (puedes usar fontawesome) -->
+				<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+			<ul class="sidebar-nav-list">
+				<li>
+					<a href="">
+						<i class="bx bx-home-alt icon">
+							<span>Home</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bx-book-reader icon">
+							<span>Administration</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bxs-report icon">
+							<span>Assets</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bx-cog icon">
+							<span>Process</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bx-glasses-alt icon">
+							<span>Visual Management</span>
+						</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="bx bx-code-alt icon">
+							<span>IT Sites</span>
+						</i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="logOut-button">
+			<div>
+				<div>
+					<a href="">
+						<i class="bx bx-log-out icon">
+							<span>Log Out</span>
+						</i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="content-home">
+		<main class="main-content">
+			<div class="main-title">
+				<h1>Access Denied</h1>
+				<p>No tiene permisos para ver esta seccion de la pagina.</p>
+			</div>
+			<br>
+			<article class="article-ticket">
+				<div class="card-ticket">
+					<div class="card-ticket-image">
+						<img src="/Images/ICTServices.png" alt="Service Desk" class="ticket-img">
+						<span>Information Technology (IT) Service Portal</span>
+						<a href="https://marelli.service-now.com" target="_blank">Click here to get help for your IT</a>
+					</div>
+				</div>
+			</article>
+		</main>
+	</div>
+</body>
+
+</html>

@@ -28,7 +28,7 @@ body {
 	background-color: var(--bg-light);
 	border-radius: 1rem;
 	max-width: 600px;
-	height: 620px;
+	height: 700px;
 	inset: 0;
 	margin: auto;
 	position: fixed;
@@ -231,4 +231,26 @@ body {
 
 .button-return a:hover {
 	cursor: pointer;
+}
+
+.form-guest-access {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-block: 10px;
+	font-weight: bold;
+
+	button {
+		background-color: transparent;
+		border: none;
+		font-size: 1rem;
+		font-weight: bold;
+		color: var(--primary-color);
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
