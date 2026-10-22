@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>IRS System</title>
+   <link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/css/site.css">
+   <script type="module" src="./JavaScript/script.js"></script>
+</head>
+
+<body class="login-content">
+   <main>
+      <form class="login-form create-account" method="post" asp-area="Admin" asp-controller="Login"
+         asp-action="CreateAccount">
+         <div class="login__return-group">
+            <a class="login__return" asp-action="Login" asp-area="Admin" asp-controller="Login">
+               <svg class="login__return-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M5 12l6 6" />
+                  <path d="M5 12l6 -6" />
+               </svg>
+            </a>
+         </div>
+         <div class="login__image-group">
+            <img class="login__image" src="/Images/logo.png" alt="Logo IRS" />
+         </div>
+         <h1 class="login__title">Crear cuenta de IRS</h1>
+         <div class="formulario-group">
+            <label class="login__label-username">Marelli email account</label>
+            <input class="login__input-username" asp-for="Email" type="text"
+               placeholder="Ingrese su cuenta de correo electronico...">
+            <label class="login__label-username">First Name</label>
+            <input class="login__input-username" asp-for="FirstName" type="text"
+               placeholder="Ingrese su primer nombre...">
+            <label class="login__label-username">Last Name</label>
+            <input class="login__input-username" asp-for="LastName" type="text"
+               placeholder="Ingrese su apellido paterno...">
+            <label class="login__label-username">Marelli windows account</label>
+            <input class="login__input-username" asp-for="Username" type="text"
+               placeholder="Ingrese su ID de Windows F????A...">
+            <label class="login__label-username">Password</label>
+            <input class="login__input-username" asp-for="PasswordHash" type="password"
+               placeholder="Ingrese su contraseña...">
+         </div>
+         <button class="login__btn-login" type="submit">Crear Cuenta</button>
+      </form>
+   </main>
+</body>
+
+</html>

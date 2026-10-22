@@ -1,0 +1,206 @@
+﻿
+/**** START ->  Barra de busqueda y opciones de la pagina Web ****/
+
+.c-navbar {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	height: 100dvh;
+	top: 0;
+	left: 0;
+	padding: 20px 10px;
+	box-sizing: content-box;
+	/* padding: 20px 10px; */
+	width: 60px;
+	background-color: var(--sidebar-color);
+	transition: width 0.6s ease;
+	overflow: hidden;
+}
+
+.c-navbar:hover {
+	width: 220px;
+}
+
+.c-navbar:not(:hover) span {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 5s;
+}
+
+.navbar-toggle {
+	display: none;
+	justify-content: start;
+	background: transparent;
+	border: none;
+	color: white;
+	padding: 1rem;
+	cursor: pointer;
+
+	&:hover {
+		border-radius: 1rem;
+		background-color: var(--navbarList-color);
+	}
+}
+
+
+.c-navbar__list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin-inline: 0;
+}
+
+.c-navbar__list-item {
+	padding-block: 1rem;
+
+	&:hover {
+		border-radius: 1rem;
+		background-color: var(--navbarList-color);
+	}
+}
+
+.c-navbar__logo-control {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	margin-bottom: 2rem;
+}
+
+.c-navbar__logo {
+	width: 58px;
+	height: 58px;
+	border-radius: 6px;
+	margin-right: 0rem;
+}
+
+.c-navbar__logo-text {
+	display: flex;
+	flex-direction: column;
+	color: rgb(241, 237, 237);
+	font-size: 1rem;
+	font-weight: bold;
+	margin-left: 1rem;
+}
+
+.c-navbar__list-item-link {
+	height: 100%;
+	color: white;
+	white-space: nowrap;
+	padding: 1rem;
+}
+
+.c-navbar__btn-logout {
+	align-content: end;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 1.5rem;
+	white-space: nowrap;
+}
+
+.c-navbar__logout-icon {
+	align-content: center;
+	border-radius: 0.5rem;
+	height: 100%;
+	align-items: center;
+	color: var(--buttons-text-color);
+}
+
+.c-navbar__btn-logout-control {
+	padding: 1rem;
+	align-content: center;
+
+	&:hover {
+		border-radius: 1rem;
+		background-color: var(--navbarList-color);
+	}
+}
+
+
+/**** END ->  Barra de busqueda y opciones de la pagina Web ****/
+
+.content {
+	display: flex;
+	flex-direction: column;
+	margin-left: 100px;
+	padding: 1rem;
+}
+
+body {
+	background-color: var(--body-color);
+}
+
+/***** STAR -> @Media para control de componentes cuando pantalla cambio de dimensiones ****/
+@media (max-width: 768px) {
+	.c-navbar {
+		flex-direction: row;
+		align-items: center;
+		height: 30px;
+		width: 100%;
+
+		&:hover {
+			width: 100%;
+		}
+	}
+
+	.c-navbar__logo-control {
+		flex-direction: row;
+		margin-bottom: 0rem;
+	}
+
+	.navbar-toggle {
+		display: flex;
+		margin-left: 1rem;
+	}
+
+	.c-navbar__logo-text,
+	.c-navbar__list,
+	.c-navbar__btn-logout {
+		display: none;
+	}
+
+	.c-navbar.is-open {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		padding: .2rem;
+
+		.navbar-toggle {
+			margin-left: 0rem;
+		}
+
+		.c-navbar__list,
+		.c-navbar__btn-logout {
+			display: flex;
+			width: 100%;
+		}
+
+		.c-navbar__list-item {
+			padding-block: .2rem;
+		}
+
+		.c-navbar__btn-logout-control {
+			margin-top: 2rem;
+			padding-block: .2rem;
+			width: 100%;
+		}
+
+		.c-navbar__list-item-link {
+			display: inline;
+			padding-block: 0.2rem;
+		}
+
+		.c-navbar__span {
+			opacity: 1;
+			visibility: visible;
+		}
+
+	}
+
+	.content {
+		margin-top: 90px;
+		margin-left: 0px;
+		padding: 1rem;
+	}
+}
+
+/***** END -> @Media para control de componentes cuando pantalla cambio de dimensiones ****/

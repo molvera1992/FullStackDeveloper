@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRS System</title>
+  <link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/css/site.css">
+  <!-- <link rel="stylesheet" href="/IRS_Core_Templates/Controllers/ProcessController/Declaration_Programs.html.css"> -->
+  <script src="/IRS_Core_Templates/JavaScript/js/site.js" type="module"></script>
+  <!--===== Boxicons CSS =====-->
+</head>
+
+<body>
+
+  <nav class="c-navbar">
+    <div class="c-navbar__logo-control">
+      <a asp-area="Admin" asp-controller="Home" asp-action="index">
+        <img class="c-navbar__logo" src="/Images/logo.png" alt="">
+      </a>
+      <div class="c-navbar__logo-text">
+        <span class="">DigITal</span>
+        <span class="">Team</span>
+      </div>
+    </div>
+    <button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-list" aria-label="Mostrar menú">
+      <span class="sr-only"></span>
+      <!-- icono simple (puedes usar fontawesome) -->
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <ul class="c-navbar__list">
+      <li class="c-navbar__list-item c-navbar__home">
+        <a class="c-navbar__list-item-link" href="">
+          <i class='bx bx-home-alt icon'>
+            <span class="c-navbar__span">Home</span>
+          </i>
+        </a>
+      </li>
+      <li class="c-navbar__list-item c-navbar__admin">
+        <a class="c-navbar__list-item-link" href="">
+          <i class="bx bx-book-reader icon">
+            <span class="c-navbar__span">Administration</span>
+          </i>
+        </a>
+      </li>
+      <li class="c-navbar__list-item c-navbar__assets">
+        <a class="c-navbar__list-item-link" href="">
+          <i class="bx bxs-report icon">
+            <span class="c-navbar__span">Assets</span>
+          </i>
+        </a>
+      </li>
+      <li class="c-navbar__list-item c-navbar__process">
+        <a class="c-navbar__list-item-link" href="">
+          <i class="bx bx-cog icon">
+            <span class="c-navbar__span">Process</span>
+          </i>
+        </a>
+      </li>
+      <li class="c-navbar__list-item c-navbar__manage">
+        <a class="c-navbar__list-item-link" href="">
+          <i class="bx bx-glasses-alt icon">
+            <span class="c-navbar__span">Visual Management</span>
+          </i>
+        </a>
+      </li>
+      <li class="c-navbar__list-item c-navbar__sites">
+        <a class="c-navbar__list-item-link" href="">
+          <i class="bx bx-code-alt icon">
+            <span class="c-navbar__span">IT Sites</span>
+          </i>
+        </a>
+      </li>
+    </ul>
+    <div class="c-navbar__btn-logout">
+      <div class="c-navbar__btn-logout-control">
+        <a class="c-navbar__logout-icon" href="">
+          <i class="bx bx-log-out icon">
+            <span class="c-navbar__span">Log Out</span>
+          </i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content">
+    <div class="c-search">
+      <h1 class="c-search__title">Programas de Producción para SMT</h1>
+      <div class="c-search__form">
+        <div class="c-search__control">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+          <input class="c-search__input" type="text" name="" value=""
+            placeholder="Buscar por: ID de Programa, NIP o Num. de Parte" id="input-buscar">
+          <button class="c-search__btn-clean" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M18 6l-12 12" />
+              <path d="M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="c-search__btn-group">
+        <a class="btn-create" asp-action="Declaration_Program_Agregar_Form" asp-area="Admin" asp-controller="Process">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            class="icon icon-tabler icons-tabler-filled icon-tabler-library-plus">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M18.333 2a3.667 3.667 0 0 1 3.667 3.667v8.666a3.667 3.667 0 0 1 -3.667 3.667h-8.666a3.667 3.667 0 0 1 -3.667 -3.667v-8.666a3.667 3.667 0 0 1 3.667 -3.667zm-4.333 4a1 1 0 0 0 -1 1v2h-2a1 1 0 0 0 0 2h2v2a1 1 0 0 0 2 0v-2h2a1 1 0 0 0 0 -2h-2v-2a1 1 0 0 0 -1 -1" />
+            <path
+              d="M3.517 6.391a1 1 0 0 1 .99 1.738c-.313 .178 -.506 .51 -.507 .868v10c0 .548 .452 1 1 1h10c.284 0 .405 -.088 .626 -.486a1 1 0 0 1 1.748 .972c-.546 .98 -1.28 1.514 -2.374 1.514h-10c-1.652 0 -3 -1.348 -3 -3v-10.002a3 3 0 0 1 1.517 -2.605" />
+          </svg>
+          Crear
+        </a>
+        <a class="c-btn-download__icon" asp-action="GetDeclarationProgramCsv" asp-area="Admin" asp-controller="Process"
+          target="_blank">
+          <svg class="c-btn-download__icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M256 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 242.7 256 32zM64 320c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-46.9 0-56.6 56.6c-31.2 31.2-81.9 31.2-113.1 0L110.9 320 64 320zm304 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="table-content">
+      <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner-border"></div>
+        <div class="loading-text">Cargando datos...</div>
+      </div>
+      <table class="component-table">
+        <thead>
+          <th>Operaciones</th>
+          <th>RecordID</th>
+          <th>ID SMT</th>
+          <th>Programa</th>
+          <th>Num. de Parte</th>
+          <th>NIP Code</th>
+          <th>SMT</th>
+          <th>PCBs Panel</th>
+          <th>Suffix</th>
+          <th>Tiempo Ciclo</th>
+          <th>PzsHr</th>
+        </thead>
+        <tbody class="component-table__tbody">
+        </tbody>
+      </table>
+    </div>
+    <span class="table__registros">Numero de registros: <span id="numDeRegistros"></span></span>
+    <nav class="pagination">
+      <button class="pagination__btn" id="btnAnterior">Anterior</button>
+      <span class="pagination__text">Página
+        <span class="pagination__number" id="paginaActual"> 1 </span>
+        <span class="pagination__text">de</span>
+        <span class="pagination__number" id="paginaActual"> 887 </span>
+      </span>
+      <button class="pagination__btn" id="btnSiguiente">Siguiente</button>
+    </nav>
+  </main>
+
+</body>
+
+</html>

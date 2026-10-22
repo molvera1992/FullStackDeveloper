@@ -1,0 +1,120 @@
+﻿/*Barra de busqueda y opciones de la pagina Web*/
+
+.c-search__form {
+	background-color: var(--component-search-color);
+	border-radius: .75rem;
+	padding: .3rem 1rem;
+	width: 100%;
+}
+
+.c-search__control {
+	display: flex;
+	align-items: center;
+}
+
+.c-search__input {
+	background-color: transparent;
+	width: 100%;
+	font-size: 1rem;
+	color: var(--label-color);
+	border: none;
+	outline: none;
+	padding: 0.75rem 0.5rem;
+}
+
+.c-search__btn-clean {
+	background-color: transparent;
+	border: none;
+}
+
+
+/*Boton de cierre de Sesion*/
+
+.logOut-button div {
+
+	padding: 1rem .5rem;
+	width: 100%;
+	margin-bottom: 1.5rem;
+}
+
+.logOut-button i {
+	color: var(--buttons-text-color);
+	font-weight: 500;
+}
+
+.logOut-button:hover div>div {
+	background-color: var(--navbarList-color);
+	border-radius: 1rem;
+}
+
+/*Boton de Descargas CSV*/
+
+// .c-btn-download {
+// 	display: flex;
+// 	flex-direction: row;
+// 	border: none;
+// 	background-color: transparent;
+// }
+
+.c-btn-download__icon {
+	fill: #258056;
+	width: 35px;
+	height: 35px;
+
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+/*Boton de Crear nuevo Item ADD*/
+
+.btn-create {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: var(--primary-color);
+	color: var(--buttons-text-color);
+	font-size: 1.5rem;
+	width: 150px;
+	text-decoration: underline;
+	font-weight: bold;
+	border-radius: .5rem;
+	padding: 1rem;
+}
+
+
+/*Buton de Regreso o Return*/
+
+.button-return a {
+	align-items: center;
+	font-size: 1rem;
+	background-color: transparent;
+	border: none;
+	color: #0e64fe
+}
+
+.button-return svg {
+	height: 3rem;
+	width: 3rem;
+}
+
+.button-return a:hover {
+	cursor: pointer;
+}
+
+/*Buton Paginacion Anterior y Next*/
+
+.pagination__btn {
+	color: var( --buttons-text-color);
+	background-color: var(--buttons-color);
+	width: 100px;
+	font-size: 15px;
+	font-weight: bold;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1rem;
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--buttons-hover-color);
+	}
+}

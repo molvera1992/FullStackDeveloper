@@ -1,0 +1,148 @@
+﻿/* =============================================== */
+/* 1. CONTENEDOR Y ESTRUCTURA DE LA TABLA GENERICA */
+/* =============================================== */
+
+.table-content {
+	display: block; // Cambiado de flex a block para asegurar que el scroll horizontal funcione correctamente
+	width: 100%;
+	overflow-x: auto; // Asegura el comportamiento de scroll en pantallas móviles
+	margin-top: 1rem;
+	border-radius: .5rem;
+}
+
+.component-table {
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+
+
+	th,
+	td {
+		text-align: center;
+		vertical-align: middle;
+		width: 25rem;
+		padding: .5rem 2rem;
+		border-right: 1px solid var(--body-color);
+	}
+
+	thead {
+		background-color: var(--primary-color);
+		color: white;
+		border-bottom: .2rem solid white;
+	}
+
+	tr {
+		&:nth-child(even) {
+			background-color: rgb(221, 236, 250);
+		}
+
+		&:hover td {
+			background-color: rgb(193, 216, 199);
+			color: black;
+			font-weight: bold;
+		}
+	}
+
+	.col-time,
+	.col-fileName,
+	.col-messageTrace {
+		width: 30rem;
+	}
+
+	.table-header-test {
+		width: 9rem;
+	}
+}
+
+.table__registros {
+	color: var(--primary-color);
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-block: 2rem;
+}
+
+.table-data {
+	font-size: 1.4rem;
+	padding: 1.5rem;
+}
+
+
+/* ========================================== */
+/* 2. BOTONES DE ACCIÓN  DE LA TABLA GENERICA */
+/* ========================================== */
+
+.button-table {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btnEditar,
+.btnEliminar {
+	display: flex;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btnEditar {
+	color: var(--buttons-edit-color);
+}
+
+.btnEliminar {
+	color: var(--buttons-delete-color);
+}
+
+
+/* ======================================= */
+/* 3. LOADING ICON PARA LA CARGA DE DATOS */
+/* ======================================= */
+
+.loading-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	border-radius: 8px;
+}
+
+.spinner-border {
+	width: 50px;
+	height: 50px;
+	border: 5px solid #ccc;
+	border-top-color: #007bff;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	margin-bottom: 10px;
+}
+
+// Efecto de carga de datos en la tabla
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loading-text {
+	font-size: 1rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.show_loader {
+	display: flex;
+}

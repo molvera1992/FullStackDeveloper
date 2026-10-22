@@ -1,0 +1,23 @@
+/* 1. Archivos Base */
+@import "base/variables";
+@import "base/reset";
+
+/* 2. Layouts Generales */
+@import "layout/navbar";
+@import "layout/footer";
+
+
+/* 3. Componentes Reutilizables */
+@import "components/buttons";
+@import "components/inputs";
+@import "components/tables";
+@import "components/forms";
+@import "components/cards";
+
+
+/* 4. Pages unicas */
+@import "pages/login";
+
+
+/* Importar librerías externas en la primera línea del archivo */
+@import url("https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css");

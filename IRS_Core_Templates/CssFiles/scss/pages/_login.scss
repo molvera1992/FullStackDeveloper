@@ -1,0 +1,168 @@
+.login-form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--bg-light);
+   border-radius: 1rem;
+   width: 600px;
+   height: 660px;
+   inset: 0;
+   margin: auto;
+   position: relative;
+   padding: 2.5rem;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+   overflow: hidden;
+}
+
+.create-account {
+   height: 790px;
+}
+
+
+.login-content {
+   background-color: var(--body-login-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100dvh;
+   padding: 1.5rem;
+   --main-font: "Verdana", sans-serif;
+}
+
+.login__image {
+   width: 140px;
+   height: auto;
+   border-radius: 6px;
+}
+
+.login__title-group {
+   width: 100%;
+   text-align: center;
+}
+
+.login__title {
+   color: var(--primary-titles-h1-color);
+   font-size: 1.7rem;
+   font-weight: bold;
+}
+
+.login__leyenda {
+   font-size: .9rem;
+   color: var(--text-gray);
+}
+
+.login__username-group {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   margin-top: 1rem;
+   width: 100%;
+   gap: 8px;
+}
+
+.login__label-username {
+   font-weight: bold;
+   color: var(--primary-titles-h1-color);
+}
+
+.login__input-username {
+   border: 1px solid rgb(47, 145, 238);
+   border-radius: .5rem;
+   padding: .8rem;
+   width: 100%;
+}
+
+.login__user-password-group {
+   margin-top: 2rem;
+   width: 100%;
+}
+
+.login__btn-login {
+   margin-top: 1rem;
+   padding: 0.8rem;
+   background-color: var(--buttons-login);
+   color: white;
+   border: none;
+   border-radius: 0.5rem;
+   font-size: 1.2rem;
+   font-weight: bold;
+   cursor: pointer;
+   width: 100%;
+   transition: opacity 0.3s;
+}
+
+.login__signup-group {
+   margin-top: 1rem;
+   text-align: center;
+}
+
+.login__signup-text {
+   font-weight: bold;
+}
+
+.login__signup-link {
+   text-decoration: none;
+   font-weight: bold;
+   color: var(--primary-titles-h1-color);
+
+   &:hover {
+      cursor: pointer;
+   }
+}
+
+
+/*--------------- Create Account Styles ---------------*/
+/*----------------- View CreateAccount ----------------*/
+
+.formulario-group {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 1rem;
+   gap: .5rem;
+}
+
+
+.login__return-group {
+   display: flex;
+   width: 100%;
+}
+
+.login__return {
+   align-items: start;
+   background-color: transparent;
+   border: none;
+   color: var(--buttons-login);
+
+   &:hover {
+      cursor: pointer;
+   }
+}
+
+.login__return-icon {
+   height: 3rem;
+   width: 3rem;
+}
+
+
+.login__guest-group {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   margin-block: 10px;
+   font-weight: bold;
+}
+
+.login__btn-guest {
+   background-color: transparent;
+   border: none;
+   font-size: 1rem;
+   font-weight: bold;
+   color: var(--primary-titles-h1-color);
+
+   &:hover {
+      cursor: pointer;
+   }
+}

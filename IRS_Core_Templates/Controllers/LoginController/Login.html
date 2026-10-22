@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>IRS System</title>
+   <link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/css/site.css">
+   <script type="module" src="./JavaScript/script.js"></script>
+</head>
+
+<body class="login-content">
+   <main>
+      <form class="login-form" method="post" asp-area="Admin" asp-controller="Login" asp-action="Login">
+         <div class="login__image-group">
+            <img class="login__image" src="/Images/logo.png" alt="Logo IRS" />
+         </div>
+         <div class="login__title-group">
+            <h1 class="login__title">Information Resource System</h1>
+            <p class="login__leyenda">Modern and efficent apps by DigITal</p>
+         </div>
+         <div class="login__user-password-group">
+            <div class="login__username-group">
+               <label class="login__label-username" for="username">Username</label>
+               <input class="login__input-username" asp-for="Username" placeholder="Ingrese su usuario..." />
+            </div>
+            <div class="login__username-group">
+               <label class="login__label-username" for="password">Password</label>
+               <input class="login__input-username" asp-for="PasswordHash" type="password"
+                  placeholder="Ingrese su contraseña..." />
+            </div>
+            <button class="login__btn-login" name="accion" value="loginAccess" type="submit">Iniciar Sesion</button>
+            <div class="login__signup-group">
+               <span class="login__signup-text">Don´t have and Account? </span>
+               <a class="login__signup-link" asp-area="Admin" asp-action="CreateAccount" asp-controller="Login">Sign up</a>
+            </div>
+            <div class="login__guest-group">
+               <span class="login__signup-text">Or</span>
+               <button class="login__btn-guest" name="accion" value="guestAccess" type="submit">Access as Guest</button>
+            </div>
+         </div>
+      </form>
+   </main>
+</body>
+
+</html>

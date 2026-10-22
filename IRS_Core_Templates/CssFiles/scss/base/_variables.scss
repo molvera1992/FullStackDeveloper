@@ -1,0 +1,44 @@
+﻿:root {
+
+    --main-font: "Poppins", sans-serif;;
+
+    /* Paleta de Colores Principal */
+    --sidebar-color: #2640bd;
+    /*Componentes en Migracion e Identificacion*/
+    /* ===== Colors ===== */
+    --body-color: #f6f6f6;
+    --body-login-color: #eef2f5;
+    --navbarList-color: #a0aefd;
+    --primary-color: #2640bd;
+    --component-search-color: #dddde0;
+    --primary-color-light: #F6F5Ff;
+    --toggle-color: #DDd;
+    --text-color: #707070;
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+    --tran-06: width 0.6s ease;
+    /* Colores Neutrales (Fondos y Textos) */
+    --primary-titles-h1-color: rgb(47, 145, 238);
+    --primary-titles-h2-color: rgb(0, 0, 0);
+    --label-color: rgb(0, 0, 0);
+    --primary-subtitles-color: rgb(47, 145, 238);
+    --buttons-color: #2640bd;
+    --buttons-hover-color: #99c0fa;
+    --buttons-form-hover-color: #2640bd;
+    --buttons-text-color: #fafafa;
+    --buttons-edit-color: #258056;
+    --buttons-login: rgb(47, 145, 238);
+    --buttons-delete-color: #f54a74;
+    --form-backgroup-color: white;
+    --box-shadow-color: rgba(0, 0, 0, 0.15);
+    --icons-color: rgb(109, 176, 231);
+    --text-gray: rgb(119, 119, 119);
+    --bg-light: #fafafa;
+    --input-bg-color: #e0e5ee;
+    --card-text-description: rgb(37, 15, 233);
+    --card-icon-bg-color: rgb(109, 176, 231);
+    /* Tipografía y Espaciados */
+}

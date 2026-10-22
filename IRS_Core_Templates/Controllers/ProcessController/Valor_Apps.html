@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>IRS System</title>
+	<link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/css/site.css">
+	<!-- <link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/styleSideBar.css"> -->
+	<!--===== Boxicons CSS =====-->
+	<script src="/IRS_Core_Templates/JavaScript/js/site.js" type="module"></script>
+</head>
+
+<body>
+	<nav class="c-navbar">
+		<div class="c-navbar__logo-control">
+			<a asp-area="Admin" asp-controller="Home" asp-action="index">
+				<img class="c-navbar__logo" src="/Images/logo.png" alt="">
+			</a>
+			<div class="c-navbar__logo-text">
+				<span class="">DigITal</span>
+				<span class="">Team</span>
+			</div>
+		</div>
+		<button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-list" aria-label="Mostrar menú">
+			<span class="sr-only"></span>
+			<!-- icono simple (puedes usar fontawesome) -->
+			<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+				<path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+			</svg>
+		</button>
+		<ul class="c-navbar__list">
+			<li class="c-navbar__list-item c-navbar__home">
+				<a class="c-navbar__list-item-link" href="">
+					<i class='bx bx-home-alt icon'>
+						<span class="c-navbar__span">Home</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__admin">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bx-book-reader icon">
+						<span class="c-navbar__span">Administration</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__assets">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bxs-report icon">
+						<span class="c-navbar__span">Assets</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__process">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bx-cog icon">
+						<span class="c-navbar__span">Process</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__manage">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bx-glasses-alt icon">
+						<span class="c-navbar__span">Visual Management</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__sites">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bx-code-alt icon">
+						<span class="c-navbar__span">IT Sites</span>
+					</i>
+				</a>
+			</li>
+		</ul>
+		<div class="c-navbar__btn-logout">
+			<div class="c-navbar__btn-logout-control">
+				<a class="c-navbar__logout-icon" href="">
+					<i class="bx bx-log-out icon">
+						<span class="c-navbar__span">Log Out</span>
+					</i>
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	<main class="content">
+		<section class="section__group-card">
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-report">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697" />
+						<path d="M18 14v4h4" />
+						<path d="M18 11v-4a2 2 0 0 0 -2 -2h-2" />
+						<path d="M8 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+						<path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+						<path d="M8 11h4" />
+						<path d="M8 15h3" />
+					</svg>
+					OEE Reporting
+				</h3>
+				<p class="card__desciption">Detalle de OEE Reportado</p>
+				<a class="card__btn-action">Ir</a>
+			</article>
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-building-factory-2">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M3 21h18" />
+						<path d="M5 21v-12l5 4v-4l5 4h4" />
+						<path d="M19 21v-8l-1.436 -9.574a.5 .5 0 0 0 -.495 -.426h-1.145a.5 .5 0 0 0 -.494 .418l-1.43 8.582" />
+						<path d="M9 17h1" />
+						<path d="M14 17h1" />
+					</svg>
+					SMT & Services Summry
+				</h3>
+
+				<p class="card__desciption">Resumen de lineas y servicios en tiempo real</p>
+				<a class="card__btn-action">Ir</a>
+			</article>
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-tournament">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M4 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M20 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M4 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M4 20m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M6 12h3a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-3" />
+						<path d="M6 4h7a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-2" />
+						<path d="M14 10h4" />
+					</svg>
+					Components Trace
+				</h3>
+
+				<p class="card__desciption">Registro de componentes en SMT</p>
+				<a class="card__btn-action">Ir</a>
+			</article>
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-list-search">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M15 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+						<path d="M18.5 18.5l2.5 2.5" />
+						<path d="M4 6h16" />
+						<path d="M4 12h4" />
+						<path d="M4 18h4" />
+					</svg>
+					Trace History Check - Selectivos
+				</h3>
+
+				<p class="card__desciption">Detalle del History Check en Estaciones de Selectivos</p>
+				<a class="card__btn-action">Ir</a>
+			</article>
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-report">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697" />
+						<path d="M18 14v4h4" />
+						<path d="M18 11v-4a2 2 0 0 0 -2 -2h-2" />
+						<path d="M8 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+						<path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+						<path d="M8 11h4" />
+						<path d="M8 15h3" />
+					</svg>
+					Trace Errors
+				</h3>
+
+				<p class="card__desciption">Detalle de errores en el proceso de trazabilidad</p>
+				<a class="card__btn-action">Ir</a>
+			</article>
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-list-search">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M15 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+						<path d="M18.5 18.5l2.5 2.5" />
+						<path d="M4 6h16" />
+						<path d="M4 12h4" />
+						<path d="M4 18h4" />
+					</svg>
+					Trace History Check Lineas de Ensamble
+				</h3>
+
+				<p class="card__desciption">Detalle del History Check en Lineas de Ensamble</p>
+				<a class="card__btn-action">Ir</a>
+			</article>
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-report">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697" />
+						<path d="M18 14v4h4" />
+						<path d="M18 11v-4a2 2 0 0 0 -2 -2h-2" />
+						<path d="M8 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+						<path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+						<path d="M8 11h4" />
+						<path d="M8 15h3" />
+					</svg>
+					Declaration Programs
+				</h3>
+
+				<p class="card__desciption">Detalle de los programas de produccion</p>
+				<a class="card__btn-action">Ir</a>
+			</article>
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-check">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+						<path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+						<path d="M9 14l2 2l4 -4" />
+					</svg>
+					Registro de componentes x PCB
+				</h3>
+				<p class="card__desciption">Detalle de componentes colocados a PCBs</p>
+				<a class="card__btn-action">Ir</a>
+			</article>
+			<article class="section__card">
+				<h3 class="card__title">
+					<svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-check">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+						<path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+						<path d="M9 14l2 2l4 -4" />
+					</svg>
+					Reporte de Produccion VS Declaración
+				</h3>
+
+				<p class="card__desciption">Reporte de la producción vs Declaración</p>
+				<a class="card__btn-action" asp-area="Admin" asp-controller="Process"
+					asp-action="Produccion_Declarados">Ir</a>
+			</article>
+		</section>
+	</main>
+
+</body>
+
+</html>

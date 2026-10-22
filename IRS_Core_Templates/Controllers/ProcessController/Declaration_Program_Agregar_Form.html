@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>IRS System</title>
+	<!-- <link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/styleSideBar.css" /> -->
+	<link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/css/site.css">
+	<script type="module" src="./JavaScript/script.js"></script>
+	<!--===== Boxicons CSS =====-->
+	<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+	<nav class="c-navbar">
+		<div class="c-navbar__logo-control">
+			<a asp-area="Admin" asp-controller="Home" asp-action="index">
+				<img class="c-navbar__logo" src="/Images/logo.png" alt="">
+			</a>
+			<div class="c-navbar__logo-text">
+				<span class="">DigITal</span>
+				<span class="">Team</span>
+			</div>
+		</div>
+		<button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-list" aria-label="Mostrar menú">
+			<span class="sr-only"></span>
+			<!-- icono simple (puedes usar fontawesome) -->
+			<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+				<path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+			</svg>
+		</button>
+		<ul class="c-navbar__list">
+			<li class="c-navbar__list-item c-navbar__home">
+				<a class="c-navbar__list-item-link" href="">
+					<i class='bx bx-home-alt icon'>
+						<span class="c-navbar__span">Home</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__admin">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bx-book-reader icon">
+						<span class="c-navbar__span">Administration</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__assets">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bxs-report icon">
+						<span class="c-navbar__span">Assets</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__process">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bx-cog icon">
+						<span class="c-navbar__span">Process</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__manage">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bx-glasses-alt icon">
+						<span class="c-navbar__span">Visual Management</span>
+					</i>
+				</a>
+			</li>
+			<li class="c-navbar__list-item c-navbar__sites">
+				<a class="c-navbar__list-item-link" href="">
+					<i class="bx bx-code-alt icon">
+						<span class="c-navbar__span">IT Sites</span>
+					</i>
+				</a>
+			</li>
+		</ul>
+		<div class="c-navbar__btn-logout">
+			<div class="c-navbar__btn-logout-control">
+				<a class="c-navbar__logout-icon" href="">
+					<i class="bx bx-log-out icon">
+						<span class="c-navbar__span">Log Out</span>
+					</i>
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	<main class="content">
+		<div class="button-return">
+			<a href="/Admin/Process/Declaration_Programs">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+					<path d="M5 12l14 0"></path>
+					<path d="M5 12l6 6"></path>
+					<path d="M5 12l6 -6"></path>
+				</svg>
+			</a>
+		</div>
+		<form class="form__content" method="post" action="~/Process/Declation_Program_Insertar">
+			<h2 class="form__title">Registro de Programas de Produccion</h2>
+			<div class="form__group-content">
+				<div class="form__group">
+					<label class="from__label" for="Line">Linea de SMT:</label>
+					<select class="from__select" name="Line" required>
+						<option value="" disabled selected>Seleccione...</option>
+						<option value="@l.SMT">@l.SMT </option>
+						<!--<option disabled selected>Seleccione....</option>-->
+					</select>
+				</div>
+				<div class="form__group">
+					<label class="from__label" for="Program">Nombre del Programa:</label>
+					<input type="text" class="form__input" name="Program" placeholder="Ejemplo >> 179_AB_C1_BOT" required />
+				</div>
+				<div class="form__group">
+					<label class="from__label" for="Noblock"># de PCB dentro del Panel:</label>
+					<select class="from__select" name="Line" required>
+						<option value="" disabled selected>Seleccione...</option>
+						<option value="@l.SMT">@l.SMT </option>
+						<!--<option disabled selected>Seleccione....</option>-->
+					</select>
+				</div>
+			</div>
+			<div class="form__group-content">
+				<div class="form__group">
+					<label class="from__label" for="Suffix">Sufijo del Programa (Top/Botton):</label>
+					<select class="from__select" name="Suffix" required>
+						<option value="" disabled selected>Seleccione....</option>
+						<option>_T</option>
+						<option>_B</option>
+					</select>
+				</div>
+				<div class="form__group">
+					<label class="from__label" for="NIP">Codigo NIP:</label>
+					<input type="text" class="form__input" name="NIP" required />
+				</div>
+				<div class="form__group">
+					<label class="from__label" for="PartNumber">Numero de Parte:</label>
+					<input type="text" class="form__input" name="PartNumber" required />
+				</div>
+			</div>
+			<div class="form__group-content">
+				<div class="form__group">
+					<label class="from__label" for="CycleTime">Tiempo Ciclo (minutos):</label>
+					<input type="text" class="form__input" name="CycleTime" placeholder="Ejemplo >> 0.251" />
+				</div>
+				<div class="form__group">
+					<label class="from__label" for="PzsHr">Piezas X Hora:</label>
+					<input id="piezas-hora" type="number" step="1" min="0" class="form__input" name="PzsHr" required="" />
+				</div>
+			</div>
+			<div class="form__group-content">
+				<div class="form__button-group">
+					<button class="form__button" type="submit">Crear</button>
+					<button class="form__button" type="reset">Resetear</button>
+				</div>
+			</div>
+		</form>
+	</main>
+</body>
+
+</html>

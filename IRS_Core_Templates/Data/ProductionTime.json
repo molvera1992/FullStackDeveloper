@@ -1,0 +1,84 @@
+{
+  "lista": [
+    {
+      "hora": "06:00 - 07:00",
+      "target": 200,
+      "actual": 50,
+      "tiempoMuerto": 60,
+      "performance": "10%",
+      "programa": "6472000187AE_AM23_T03",
+      "ordenTrabajo": "WorkOrder_12345672026_T",
+      "status": "Completado"
+    },
+    {
+      "hora": "07:00 - 08:00",
+      "target": 200,
+      "actual": 50,
+      "tiempoMuerto": 60,
+      "performance": "10%",
+      "programa": "6472000187AE_AM23_T03",
+      "ordenTrabajo": "WorkOrder_12345672026_T",
+      "status": "Completado"
+    },
+    {
+      "hora": "08:00 - 09:00",
+      "target": 200,
+      "actual": 50,
+      "tiempoMuerto": 60,
+      "performance": "10%",
+      "programa": "6472000187AE_AM23_T03",
+      "ordenTrabajo": "WorkOrder_12345672026_T",
+      "status": "Completado"
+    },
+    {
+      "hora": "09:00 - 10:00",
+      "target": 200,
+      "actual": 50,
+      "tiempoMuerto": 60,
+      "performance": "10%",
+      "programa": "6472000187AE_AM23_T03",
+      "ordenTrabajo": "WorkOrder_12345672026_T",
+      "status": "Completado"
+    },
+    {
+      "hora": "10:00 - 11:00",
+      "target": 200,
+      "actual": 50,
+      "tiempoMuerto": 60,
+      "performance": "10%",
+      "programa": "6472000187AE_AM23_T03",
+      "ordenTrabajo": "WorkOrder_12345672026_T",
+      "status": "Completado"
+    },
+    {
+      "hora": "11:00 - 12:00",
+      "target": 200,
+      "actual": 50,
+      "tiempoMuerto": 60,
+      "performance": "10%",
+      "programa": "6472000187AE_AM23_T03",
+      "ordenTrabajo": "WorkOrder_12345672026_T",
+      "status": "Completado"
+    },
+    {
+      "hora": "12:00 - 13:00",
+      "target": 200,
+      "actual": 50,
+      "tiempoMuerto": 60,
+      "performance": "10%",
+      "programa": "6472000187AE_AM23_T03",
+      "ordenTrabajo": "WorkOrder_12345672026_T",
+      "status": "Completado"
+    },
+        {
+      "hora": "13:00 - 14:00",
+      "target": 200,
+      "actual": 50,
+      "tiempoMuerto": 60,
+      "performance": "10%",
+      "programa": "6472000187AE_AM23_T03",
+      "ordenTrabajo": "WorkOrder_12345672026_T",
+      "status": "Completado"
+    }
+  ]
+}
