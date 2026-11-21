@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="/IRS_Core_Templates/CssFiles/Reporte.css"> -->
+	<!-- <script type="module" src="/IRS_Core_Templates/JavaScript/SignaturePad.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+
+	<style>
+		@media print {
+			@page {
+				size: letter;
+				/* Define el tamaño carta */
+				margin: 0.5in;
+				/* Define márgenes (opcional) */
+			}
+
+			body {
+				width: 8.5in;
+				/* Coincide con el tamaño de página */
+				height: 11in;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+
+
+		:root {
+			/* ===== Colors ===== */
+			--body-color: #f5f5f5;
+			--sidebar-color: #2640bd;
+			--navbarList-color: #a0aefd;
+			--primary-color: #2640bd;
+			--primary-color-svg: #4673f0;
+			--card-color: #f5fcff;
+			--border-divisor: #c0c0c06e;
+			/*#695CFE;*/
+			--primary-color-light: #F6F5Ff;
+			--toggle-color: #DDd;
+			--text-color: #707070;
+			/* ====== Transition ====== */
+			--tran-03: all 0.2s ease;
+			--tran-03: all 0.3s ease;
+			--tran-04: all 0.3s ease;
+			--tran-05: all 0.3s ease;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: var(--body-color);
+		}
+
+		main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			height: auto;
+			background-color: white;
+			padding: 1.5rem;
+		}
+
+		.title-reporte {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+			width: 100%;
+
+			.title-icon {
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		.divisor {
+			height: 1px;
+			width: 100%;
+			background-color: var(--border-divisor);
+		}
+
+		.subtitle-container {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			width: 100%;
+			margin-top: 2rem;
+
+			.subtitle {
+				font-size: 1rem;
+				font-weight: bold;
+			}
+
+			.subtitle-date {
+				font-size: .8rem;
+			}
+
+			.img-laptop {
+				stroke: var(--primary-color-svg);
+			}
+		}
+
+		#card-equipment-container {
+			width: 100%;
+		}
+
+		.card-equipment {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin-top: 0.5rem;
+			padding: 0.5rem;
+			border-radius: .5rem;
+			border: 1px solid var(--border-divisor);
+			background-color: white;
+
+			.equipment-type {
+				background-color: #d1d8ff;
+				width: 100px;
+				text-align: center;
+				color: #5c74fc;
+				font-weight: bold;
+				font-size: 0.8rem;
+				padding: .2rem 0.5rem;
+				margin-bottom: 1rem;
+			}
+
+			.card-details-container {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 0.5rem;
+
+				.details-data {
+					font-weight: bold;
+				}
+			}
+
+		}
+
+		.card-equipment-policy {
+			display: flex;
+			flex-direction: column;
+			height: 250px;
+			width: 100%;
+			overflow: auto;
+			padding: 1rem;
+			background-color: #f1f1f1;
+			margin-top: 0.5rem;
+
+			.politica {
+				font-size: 0.8rem;
+				text-align: justify;
+				font-weight: bold;
+				line-height: 1.4;
+				word-wrap: break-word;
+			}
+		}
+
+		.card-equipment-signature {
+			display: flex;
+			flex-direction: column;
+			background-color: white;
+			height: auto;
+			width: 100%;
+			padding: 0.4rem;
+			border-radius: 0.5rem;
+			border-style: dotted;
+
+			#signature-pad {
+				width: 100%;
+				height: 180px;
+				background-color: #e4e4e4;
+			}
+
+			.signature-leyenda {
+				font-size: 0.8rem;
+				font-weight: bold;
+				text-align: center;
+				padding: 0.5rem 0;
+			}
+		}
+
+		.table-info {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 0.5rem;
+
+			th,
+			td {
+				text-align: start;
+				padding: .5rem 1rem;
+				align-items: center;
+				font-size: .8rem;
+				border: 1px solid var(--border-divisor);
+			}
+
+			th {
+				background-color: rgb(248, 253, 248);
+			}
+		}
+
+		.subtitle-info {
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			gap: 1rem;
+			width: 100%;
+			margin-top: 1.5rem;
+			font-weight: bold;
+
+			span {
+				font-size: 0.8rem;
+			}
+		}
+
+		.btn-restart-group {
+			display: flex;
+			width: 100%;
+			justify-content: end;
+
+		}
+
+		.subtitle-group {
+			display: flex;
+			margin: 1rem;
+			width: 100%;
+
+			.subtitle-info2 {
+				display: flex;
+				align-items: center;
+				justify-content: start;
+				font-size: 0.8rem;
+				flex: 1;
+				gap: 1rem;
+				font-weight: bold;
+			}
+
+			.btn-restart-group {
+				flex: 1;
+			}
+		}
+
+		.restart-btn {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: 0.8rem;
+			font-weight: bold;
+			color: var(--primary-color);
+			padding: 0.5rem;
+			border: none;
+			background-color: transparent;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.btn-saved {
+			margin-block: 1rem;
+			border-radius: 1rem;
+			color: white;
+			font-weight: bold;
+			font-size: 1.3rem;
+			background-color: var(--primary-color);
+			padding: 1rem;
+			width: 100%;
+		}
+	</style>
+
+</head>
+
+<body>
+	<main>
+		<div class="title-reporte">
+			<img class="title-icon" src="data:image/png;base64,$logo" alt="" />
+			<h2>Reponsiva de Equipo</h2>
+		</div>
+		<div class="divisor"></div>
+
+		<div class="subtitle-container">
+			<span class="subtitle">Resguardo Interno de Activos</span>
+			<span class="subtitle-date">Fecha: ${fecha}</span>
+		</div>
+
+		<table class="table-info">
+			<tr>
+				<th>CLASE DE ACTIVO</th>
+				<td>EQUIPO DE COMPUTO</td>
+			</tr>
+			<tr>
+				<th>DEPARTAMENTO</th>
+				<td>${responseManager?.depa?.uppercase()}</td>
+			</tr>
+			<tr>
+				<th>ASGINADO A</th>
+				<td>${responseManager?.employeeName}</td>
+			</tr>
+			<tr>
+				<th>JEFE DIRECTO</th>
+				<td>${responseManager?.managerName}</td>
+			</tr>
+		</table>
+
+		<div class="subtitle-info">
+			<svg fill="#4673f0" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.269 27.269" xml:space="preserve">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+				<g id="SVGRepo_iconCarrier">
+					<g>
+						<path
+							d="M25.322,1.947H1.949C0.869,1.947,0,2.818,0,3.898v19.477c0,1.074,0.869,1.947,1.949,1.947h23.373 c1.07,0,1.947-0.873,1.947-1.947V3.898C27.27,2.818,26.393,1.947,25.322,1.947z M9.312,3.41c0.537,0,0.973,0.436,0.973,0.975 c0,0.537-0.436,0.973-0.973,0.973c-0.539,0-0.975-0.436-0.975-0.973C8.338,3.845,8.773,3.41,9.312,3.41z M6.33,3.41 c0.537,0,0.975,0.436,0.975,0.975c0,0.537-0.438,0.973-0.975,0.973c-0.539,0-0.975-0.436-0.975-0.973 C5.355,3.845,5.791,3.41,6.33,3.41z M3.406,3.41c0.541,0,0.975,0.436,0.975,0.975c0,0.537-0.434,0.973-0.975,0.973 c-0.535,0-0.971-0.436-0.971-0.973C2.436,3.845,2.871,3.41,3.406,3.41z M25.322,23.375H1.949V6.838h23.373 C25.322,6.838,25.322,23.375,25.322,23.375z">
+						</path>
+						<path
+							d="M14.797,15.566L5.844,20.16v-1.332l7.602-3.781v-0.039l-7.602-3.782V9.894l8.953,4.572V15.566z">
+						</path>
+						<path d="M21.422,14.334v1.232h-4.764v-1.232H21.422z"></path>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+						<g> </g>
+					</g>
+				</g>
+			</svg>
+			<span class="dato-empleado-title">ACTIVOS ASIGNADOS</span>
+		</div>
+
+		<!-- Aqui debe ir un ciclo forEach / Map para mapear todo -->
+
+		<div id="card-equipment-container"></div>
+
+		<!------------------------------------------------------- -->
+
+		<div class="subtitle-info">
+			<svg fill="#4673f0" width="30px" height="30px" viewBox="-2 0 19 19" xmlns="http://www.w3.org/2000/svg"
+				class="cf-icon-svg">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+				<g id="SVGRepo_iconCarrier">
+					<path
+						d="M9.316 14.722a.477.477 0 0 1-.475.475H1.433a.477.477 0 0 1-.475-.475v-.863a.477.477 0 0 1 .475-.475h7.408a.476.476 0 0 1 .475.475zm-2.767-2.587a.552.552 0 0 1-.392-.163L2.96 8.776a.554.554 0 0 1 .784-.784L6.94 11.19a.554.554 0 0 1-.392.946zm7.33.992L9.435 8.682l1.085-1.084-3.173-3.173-2.97 2.97 3.173 3.172 1.102-1.101 4.445 4.445a.554.554 0 1 0 .784-.784zm-2.33-5.993a.552.552 0 0 1-.391-.162L7.96 3.775a.554.554 0 1 1 .784-.784l3.196 3.197a.554.554 0 0 1-.391.946z">
+					</path>
+				</g>
+			</svg>
+			<span class="dato-empleado-title">CONDICIONES DE USO</span>
+		</div>
+		<div class="card-equipment-policy">
+			<p class="politica">
+
+				**Política Sobre el Uso de Equipo de Cómputo y Sistemas**
+
+				Como resultado de la revisión de nuestros procedimientos internos en el área de ICT y aunado a la
+				instalación de
+				nuevos equipos y sistemas de cómputo, se ha establecido una Política sobre el uso de Equipo de Cómputo y
+				software propiedad de **MARELLI TOLUCA MEXICO, S.R. DE C.V.** y de **MARELLI AUTOMOTIVE LIGHTING
+				TEPOTZOTLAN
+				MEXICO S.R. DE C.V**
+
+				El uso del equipo de cómputo, Internet y sistema de correo electrónico queda sujeto a las disposiciones
+				establecidas en la presente política.
+
+				**1.** Se consideran propiedad de la empresa y constituyen herramientas de trabajo los siguientes:
+
+				(i) El equipo de cómputo, incluyendo sin limitación alguna, desktop, laptops, impresoras, copiadoras,
+				scanners,
+				teléfonos fijos y celulares.
+				(ii) El software instalado en dicho equipo de cómputo.
+				(iii) El acceso a Internet.
+				(iv) El sistema de correo electrónico, incluyendo cuentas de correo y contraseñas.
+				(v) Archivos electrónicos.
+
+				**2.** El empleado deberá firmar la carta de asignación de equipo de cómputo donde se responsabiliza de
+				mantener
+				el equipo en buen estado y de seguir con las indicaciones que se establecen en el mismo formato.
+				Cualquier daño
+				al equipo o robo que sea atribuido a la falta de atención o de precaución del usuario, el costo de
+				recuperación
+				será cobrado al usuario vía nómina.
+
+				**3.** Las herramientas de trabajo deberán utilizarse única y exclusivamente para cuestiones relativas
+				al
+				trabajo y, por lo tanto, queda estrictamente prohibido su uso para asuntos personales del empleado.
+
+				**4.** Se prohíbe el almacenamiento de fotografías, archivos de música y videos que no estén
+				relacionados a sus
+				funciones de trabajo.
+
+				**5.** Todos los datos e información almacenados en el equipo de cómputo de la empresa, incluyendo
+				correos
+				electrónicos y su contenido, es propiedad de la empresa y éste se puede revisar, monitorear, respaldar o
+				eliminar la misma en cualquier momento.
+
+				**6.** Se considerará como un acto anormal y, por ende, los empleados estarán de acuerdo en no usar los
+				recursos
+				de la empresa para enviar, recibir, acceder, instalar y/o almacenar información electrónica inapropiada.
+				Para
+				efectos de la presente política, se considerará como información electrónica inapropiada toda
+				información de
+				contenido sexual explícito, que fomente el odio, discriminación, violencia, consumo de drogas o la
+				compra o uso
+				ilegal de armas. A cualquier empleado que se le sorprenda navegando por páginas electrónicas
+				inapropiadas se le
+				rescindirá en forma inmediata su relación de trabajo con causa justificada sin responsabilidad para la
+				Empresa.
+
+				**7.** Se prohíbe el acceso a redes sociales, mensajería instantánea, chat rooms, sitios de apuestas y
+				juegos de
+				azar.
+
+				**8.** La Empresa se reserva el derecho de realizar revisiones o monitoreos aleatorios al equipo de
+				cómputo de
+				su propiedad en cualquier momento, sin necesidad de dar aviso al empleado.
+
+				**9.** La información originada, enviada y/o recibida a través de las cuentas de correo electrónico de
+				la
+				Empresa no tendrá, bajo ningún supuesto, el carácter de comunicación privada del Empleado, por lo que
+				queda
+				prohibido almacenar en el equipo de cómputo datos personales o de terceros.
+
+				**10.** En caso de ser necesario, la Empresa realizará respaldos de la información contenida en el
+				equipo de
+				cómputo y sistemas de correo electrónico a fin de cumplir con los procedimientos internos establecidos
+				por el
+				Departamento de ICT, así como para ser consultados en cualquier auditoría interna o externa, en la que
+				participe
+				la Empresa.
+
+				Cualquier violación a la presente política será sancionada y podrá resultar incluso en la rescisión
+				justificada
+				de la relación de trabajo sin responsabilidad para la Empresa.
+
+				La Empresa se reserva el derecho de modificar, suspender o revocar la presente política en cualquier
+				momento,
+				haciendo del conocimiento de sus trabajadores la última versión para su debido conocimiento y
+				acatamiento.
+
+				El Empleado en este acto otorga su consentimiento expreso a la Empresa para que la misma acceda, revise,
+				monitoree y/o respalde la información y datos contenidos en los equipos de cómputo y sistemas de correo
+				electrónico asignados al empleado como herramientas de trabajo.
+
+			</p>
+		</div>
+		<div class="subtitle-group">
+			<div class="subtitle-info2">
+				<svg width="20px" height="20px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink" fill="#4673f0">
+					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+					<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+					<g id="SVGRepo_iconCarrier">
+						<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+						<title>ic_fluent_signature_28_regular</title>
+						<desc>Created with Sketch.</desc>
+						<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ic_fluent_signature_28_regular" fill="#4673f0" fill-rule="nonzero">
+								<path
+									d="M16.4798956,21.0019578 L16.75,21 C17.9702352,21 18.6112441,21.5058032 19.4020627,22.7041662 L19.7958278,23.3124409 C20.1028266,23.766938 20.2944374,23.9573247 20.535784,24.0567929 C20.9684873,24.2351266 21.3271008,24.1474446 22.6440782,23.5133213 L23.0473273,23.3170319 C23.8709982,22.9126711 24.4330286,22.6811606 25.0680983,22.5223931 C25.4699445,22.4219316 25.8771453,22.6662521 25.9776069,23.0680983 C26.0780684,23.4699445 25.8337479,23.8771453 25.4319017,23.9776069 C25.0371606,24.0762922 24.6589465,24.2178819 24.1641364,24.4458997 L23.0054899,25.0032673 C21.4376302,25.7436944 20.9059009,25.8317321 19.964216,25.4436275 C19.3391237,25.1860028 18.9836765,24.813298 18.4635639,24.0180227 L18.2688903,23.7140849 C17.7071112,22.8288731 17.4057794,22.5384538 16.8688444,22.5036655 L16.75,22.5 C16.2017306,22.5 16.0933104,22.5684572 14.009281,24.1150241 C12.2670395,25.4079488 10.9383359,26.0254984 9.24864243,26.0254984 C7.18872869,26.0254984 5.24773367,25.647067 3.43145875,24.8905363 L6.31377803,24.2241784 C7.25769404,24.4250762 8.23567143,24.5254984 9.24864243,24.5254984 C10.5393035,24.5254984 11.609129,24.0282691 13.1153796,22.9104743 L14.275444,22.0545488 C15.5468065,21.1304903 15.8296113,21.016032 16.4798956,21.0019578 L16.4798956,21.0019578 Z M22.7770988,3.22208979 C24.4507223,4.8957133 24.4507566,7.60916079 22.7771889,9.28281324 L21.741655,10.3184475 C22.8936263,11.7199657 22.8521526,13.2053774 21.7811031,14.279556 L18.7800727,17.2805874 L18.7800727,17.2805874 C18.4870374,17.5733384 18.0121637,17.573108 17.7194126,17.2800727 C17.4266616,16.9870374 17.426892,16.5121637 17.7199273,16.2194126 L20.7188969,13.220444 C21.2039571,12.7339668 21.2600021,12.1299983 20.678941,11.3818945 L10.0845437,21.9761011 C9.78635459,22.2743053 9.41036117,22.482705 8.99944703,22.5775313 L2.91864463,23.9807934 C2.37859061,24.1054212 1.89457875,23.6214094 2.0192066,23.0813554 L3.42247794,17.0005129 C3.51729557,16.5896365 3.72566589,16.2136736 4.0238276,15.9154968 L16.7165019,3.22217992 C18.3900415,1.54855555 21.1034349,1.54851059 22.7770988,3.22208979 Z M17.7771889,4.28281324 L5.08451462,16.9761302 C4.98512738,17.0755224 4.91567061,17.2008434 4.88406473,17.3378022 L3.7506248,22.2493752 L8.66215777,21.1159445 C8.79912915,21.0843357 8.92446029,21.0148692 9.02385665,20.9154678 L21.7165019,8.22217992 C22.8043063,7.13432049 22.8042862,5.37060478 21.7164588,4.2827701 C20.6285914,3.19496507 18.8649506,3.19499653 17.7771889,4.28281324 Z"
+									id="🎨-Color"> </path>
+							</g>
+						</g>
+					</g>
+				</svg>
+				<span class="dato-empleado-title">FIRMA DIGITAL</span>
+			</div>
+			<div class="btn-restart-group">
+				<button class="restart-btn" id="restart-btn">
+					<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+						<g id="SVGRepo_iconCarrier">
+							<g clip-path="url(#clip0_429_11071)">
+								<path
+									d="M12 2.99982C16.9706 2.99982 21 7.02925 21 11.9998C21 16.9704 16.9706 20.9998 12 20.9998C7.02944 20.9998 3 16.9704 3 11.9998C3 9.17255 4.30367 6.64977 6.34267 4.99982"
+									stroke="#4673f0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								</path>
+								<path d="M3 4.49982H7V8.49982" stroke="#4673f0" stroke-width="2.5"
+									stroke-linecap="round" stroke-linejoin="round"></path>
+							</g>
+							<defs>
+								<clipPath id="clip0_429_11071">
+									<rect width="24" height="24" fill="white"></rect>
+								</clipPath>
+							</defs>
+						</g>
+					</svg>
+					Reiniciar
+				</button>
+			</div>
+		</div>
+
+		<div class="card-equipment-signature">
+			<canvas id="signature-pad"></canvas>
+			<p class="signature-leyenda">He leido la politica de uso de equipo de computo y me comprometo a seguir los
+				lineamientos de la misma
+			</p>
+		</div>
+
+		<button class="btn-saved" id="btn-saved">Generar responsiva</button>
+
+	</main>
+	<script>
+		const canvas = document.getElementById('signature-pad')
+		const btnRestart = document.getElementById('restart-btn')
+		const btnSaved = document.getElementById('btn-saved')
+		const cardEquipmentContainer = document.getElementById('card-equipment-container')
+
+		const signaturePad = new SignaturePad(canvas, {
+			backgroundColor: 'rgba(255, 255, 255, 0)', // Transparente
+			penColor: 'rgb(0, 0, 0)'
+		});
+
+		// Función para ajustar el tamaño del canvas (importante para alta resolución)
+		function resizeCanvas() {
+			const ratio = Math.max(window.devicePixelRatio || 1, 1);
+			canvas.width = canvas.offsetWidth * ratio;
+			canvas.height = canvas.offsetHeight * ratio;
+			canvas.getContext("2d").scale(ratio, ratio);
+			signaturePad.clear(); // Limpia al redimensionar para evitar distorsiones
+		}
+
+		window.onresize = resizeCanvas;
+		resizeCanvas();
+
+		btnRestart.addEventListener('click', () => {
+			signaturePad.clear()
+		})
+
+		btnSaved.addEventListener('click', () => {
+			if (signaturePad.isEmpty()) {
+				window.Android.enviarFirma("NO DATA");
+				return;
+			}
+
+			const dataURL = signaturePad.toDataURL(); // Por defecto es image/png en formato Base64
+
+			console.log("Imagen capturada lista para enviar:", dataURL);
+			// 2. La enviamos a Kotlin a través del puente que llamaremos "Android"
+			if (window.Android) {
+				window.Android.enviarFirma(dataURL);
+			}
+		})
+		const datosModel = ['Card1', 'Card2', 'Card3']
+		const jsonDatos = $jsonDatos;
+		const datosArray = Array.isArray(jsonDatos) ? jsonDatos : [jsonDatos];
+		cardEquipmentContainer.innerHTML = datosArray.map(dato =>
+			`
+                        <div class="card-equipment">
+                            <span class="equipment-type">${'$'}{dato.type.toUpperCase()}</span>
+                            <div class="card-details-container">
+                                <span>Marca:</span>
+                                <span class="details-data">${'$'}{dato.vendor}</span>
+                            </div>
+                            <div class="card-details-container">
+                                <span>Modelo:</span>
+                                <span class="details-data">${'$'}{dato.model}</span>
+                            </div>
+                            <div class="card-details-container">
+                                <span>No. Serie:</span>
+                                <span class="details-data">${'$'}{dato.serialNumber}</span>
+                            </div>
+                        </div>
+                    `
+		).join('')   
+	</script>
+</body>
+
+</html>
