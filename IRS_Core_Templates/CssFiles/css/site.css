@@ -340,9 +340,9 @@ body {
   background-color: var(--buttons-hover-color);
 }
 
-/* ======================================= */
-/* 1. CONTENEDOR Y ESTRUCTURA DE LA TABLA  */
-/* ======================================= */
+/* =============================================== */
+/* 1. CONTENEDOR Y ESTRUCTURA DE LA TABLA GENERICA */
+/* =============================================== */
 .table-content {
   display: block;
   width: 100%;
@@ -398,9 +398,9 @@ body {
   padding: 1.5rem;
 }
 
-/* ======================================= */
-/* 2. BOTONES DE ACCIÓN                    */
-/* ======================================= */
+/* ========================================== */
+/* 2. BOTONES DE ACCIÓN  DE LA TABLA GENERICA */
+/* ========================================== */
 .button-table {
   display: flex;
   justify-content: space-between;
@@ -716,7 +716,7 @@ body {
 .monitor-services-card {
   border-radius: 1rem;
   padding: 1rem;
-  background-color: white;
+  background: linear-gradient(to right, rgb(20, 157, 236), rgb(193, 224, 230));
   box-shadow: 16px 16px 16px var(--box-shadow-color);
 }
 
@@ -729,8 +729,14 @@ body {
 
 .monitor-services__group-svg {
   padding: 0.5rem;
-  background-color: rgba(155, 155, 155, 0.3);
+  background: linear-gradient(to right, rgb(173, 220, 235), rgb(18, 104, 235));
   border-radius: 0.5rem;
+}
+
+.monitor-services__svg {
+  fill: white;
+  height: 40px;
+  width: 40px;
 }
 
 .status__card {
@@ -739,8 +745,8 @@ body {
   flex-direction: row;
   padding: 1rem;
   border-radius: 1rem;
-  border: 1px solid rgb(143, 4, 4);
-  background-color: rgba(245, 36, 36, 0.14);
+  border: 1px solid rgb(11, 9, 161);
+  background: linear-gradient(to right, rgb(37, 189, 95), rgb(180, 235, 163));
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
@@ -759,11 +765,18 @@ body {
 /*** END: SystemServicesBar  ***/
 /*** BEGIN: KeyMetricsSection ***/
 /*** Production & OEE KPI Dashboard Cards ***/
+.content-oee-control {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .oee-section-group {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .oee-section__card {
