@@ -1,0 +1,256 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+:root {
+	/* ===== Colors ===== */
+	--body-color: #f5f5f5;
+	--sidebar-color: #2640bd;
+	--navbarList-color: #a0aefd;
+	--primary-color: #2640bd;
+	--primary-color-svg: #4673f0;
+	--card-color: #f5fcff;
+	--border-divisor: #c0c0c06e;
+	/*#695CFE;*/
+	--primary-color-light: #F6F5Ff;
+	--toggle-color: #DDd;
+	--text-color: #707070;
+	/* ====== Transition ====== */
+	--tran-03: all 0.2s ease;
+	--tran-03: all 0.3s ease;
+	--tran-04: all 0.3s ease;
+	--tran-05: all 0.3s ease;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--body-color);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	padding: 1.5rem;
+}
+
+.title-reporte {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	width: 100%;
+}
+
+.divisor {
+	height: 1px;
+	width: 100%;
+	background-color: var(--border-divisor);
+}
+
+.subtitle-container {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	width: 100%;
+	margin-top: 2rem;
+
+	.subtitle {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	.subtitle-date {
+		font-size: .8rem;
+	}
+
+	.img-laptop {
+		stroke: var(--primary-color-svg);
+	}
+}
+
+#card-equipment-container {
+	width: 100%;
+}
+
+.card-equipment {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	border-radius: .5rem;
+	border: 1px solid var(--border-divisor);
+	background-color: white;
+
+	.equipment-type {
+		background-color: #d1d8ff;
+		width: 100px;
+		text-align: center;
+		color: #5c74fc;
+		font-weight: bold;
+		font-size: 0.8rem;
+		padding: .2rem 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.card-details-container {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.5rem;
+
+		.details-data {
+			font-weight: bold;
+		}
+	}
+
+}
+
+.card-equipment-policy {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	width: 100%;
+	overflow: auto;
+	padding: 1rem;
+	background-color: #f1f1f1;
+	margin-top: 0.5rem;
+
+	.politica {
+		font-size: 0.8rem;
+		text-align: justify;
+		font-weight: bold;
+		line-height: 1.4;
+		word-wrap: break-word;
+	}
+}
+
+
+.table-info {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 0.5rem;
+
+	th, td {
+		text-align: start;
+		padding: .5rem 1rem;
+		align-items: center;
+		font-size: .8rem;
+		border: 1px solid var(--border-divisor);
+	}
+
+	th {
+		background-color: rgb(248, 253, 248);
+	}
+}
+
+.subtitle-info {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 1rem;
+	width: 100%;
+	margin-top: 1.5rem;
+	font-weight: bold;
+
+	span {
+		font-size: 0.8rem;
+	}
+}
+
+
+.subtitle-group {
+	display: flex;
+	margin: 1rem;
+	width: 100%;
+
+	.subtitle-info2 {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		font-size: 0.8rem;
+		flex: 1;
+		gap: 1rem;
+		font-weight: bold;
+	}
+}
+
+
+
+
+.signatured-img-container {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: start;
+	height: auto;
+	width: 100%;
+	gap: 3rem;
+}
+
+.signatured-img {
+	width: 250px;
+	flex: 1;
+	height: 150px;
+}
+
+.signature-digital {
+	align-content: center;
+	text-align: center;
+	font-size: 1.3rem;
+	width: 250px;
+	flex: 1;
+	height: 150px;
+}
+
+.signatured-group {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-top: 1rem;
+	gap: 3rem;
+
+	.signature-info {
+		overflow: hidden;
+	}
+
+	.signatured-responsable {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: bold;
+		flex: 1;
+		gap: 1rem;
+	}
+
+	.signatured-digital {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: bold;
+		flex: 1;
+		gap: 1rem;
+
+	}
+
+	.signatured-group-line {
+		width: 100%;
+		background-color: #4673f0;
+		height: 1px;
+	}
+}
+
+.page-break{
+	break-before: page;
+}
